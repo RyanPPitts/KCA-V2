@@ -31,7 +31,8 @@ class ChoresContainer extends Component {
   render () {
     return (
       <div>
-        <p>Welcome {this.props.current_user.name}. Your current savings are ${this.state.savings}</p>
+        <h5>Welcome {this.props.current_user.email}</h5>
+          <p>Your current savings are ${this.state.savings}</p> 
         <ChoreForm fetchChores={this.fetchChores} userId={this.props.current_user.id}/>
         <br></br>
         <CompletedChoreList fetchChores={this.fetchChores} choreList={this.state.chores} />
