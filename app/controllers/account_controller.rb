@@ -1,7 +1,7 @@
 class AccountController < ApplicationController
   def index
-  end
+  # end
 
-  def choreslist
+  # def choreslist
   end
 end

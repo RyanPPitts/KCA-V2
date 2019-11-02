@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-
-  scope '/api/v1' do
-    resources :chores
+  
+  namespace :api do
+    namespace :v1 do
+      resources :chores, only: [:index, :create, :destroy, :update]
     end
+  end
 
-  root 'homepage#index'
-  get 'account/index'
-  get 'account/choreslist'
+  root to: 'homepage#index'
+
   devise_for :admins, path: 'admins'
   devise_for :users, path: 'users'
 
