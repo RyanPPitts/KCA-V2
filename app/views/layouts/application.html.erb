@@ -12,11 +12,12 @@
 
   <body>
       <header>
-      <%= render "layouts/nav/home" %>
+        <%= render "layouts/nav/home" %>
       </header>
         <p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
-      <%= yield %>
+        <p class="alert"><%= alert %></p>
+        
+        <%= yield %>
       <%= render "layouts/footer" %>
   </body>
 </html>

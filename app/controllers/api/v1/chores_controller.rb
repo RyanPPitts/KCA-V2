@@ -1,26 +1,33 @@
 class Api::V1::ChoresController < Api::V1::BaseController
- 
-def index
-    respond_with Chore.all
-end
+  def index
+    @chores = Chore.where(user_id: current_user.id)
+    respond_to do |format|
+      format.json
+    end
+  end
 
-def create
-    respond_with :api, :v1, Chore.create(chore_params)
-end
+  def create
+    @chore = Chore.create(chore_params)
+    respond_to do |format|
+      format.json{ render @chore }
+    end
+  end
 
-def destroy
+  def destroy
     respond_with Chore.destroy(params[:id])
-end
+  end
 
-def update
-    item = Chore.find(params["id"])
-    item.update_attributes(chore_params)
-    respond_with chore, json: chore
-end
+  def update
+    @chore = Chore.find(params["id"])
+    @chore.update(chore_params)
+    respond_to do |format|
+      format.json{ render @chore }
+    end
+  end
 
-private
+  private
 
-def chore_params
-    params.require(:chore)
-end
+  def chore_params
+    params.require(:chore).permit(:title, :amount, :completed, :user_id)
+  end
 end

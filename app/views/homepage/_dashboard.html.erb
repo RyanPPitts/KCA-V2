@@ -1,9 +1,4 @@
 <div class="container">
-    <h1>Here is the dashboard after you login</h1>
-    <p>
-      This is going to fill the area where the kids chores are
-      simple chores to do list that can be filled out by admin and completed by
-      user
-    </p>
-    <%= react_component("ChoresContainer") %>
+  <h2>Dashboard</h2>
+  <%= react_component("ChoresContainer", current_user: current_user) %>
 </div>
