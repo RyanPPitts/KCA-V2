@@ -12,19 +12,13 @@ The user experience should be simply and inuititve.  The application is rather s
 
 When a user enters the website they will be greeted with a simple page homepage.  The homepage has been slightly styled with bootstrap.  
 
-![enter image description here](https://xxx.png)
-
 # Sign Up Page
 
 Upon clicking the "sign up" button on the homepage you will be sent to the Sign Up Page.  On this page an user can securely sign up for an account within the application.  
 
-![enter image description here](https://xxx.png)
-
 # User Dashboard Page
 
 After confirming your email address, an user will create a password and be routed to their account dashboard.  Once you have signed up and logged in the child will be routed to their dashboard page to see their savings/chores.
-
-![enter image description here](https://xxx.png)
 
 
 The Kids Chores App v2 was built with a Ruby on Rails backend and React front end.  The react components were only used in areas that featured dynamic content.  Below is a list of the applications/gems used for this project
